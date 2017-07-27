@@ -1,5 +1,6 @@
 var root = {
-    templateUrl: './src/app/root.html',
+    templateUrl: './src/app/components/root/root.html',
+    controller: 'CharacterSelectionController',
 };
 
 angular

@@ -1,0 +1,7 @@
+<h1>Choose your character:</h1><br>
+    <div class="character-tile-container">
+        <div class="character-tile" ng-repeat="character in $ctrl.characters">
+            <img src="src/img/{{character}}.jpg" title="Choose this character" />
+        </div>
+    </div>
+<br><p>Characters to choose from: {{$ctrl.characters.length}}</p>
