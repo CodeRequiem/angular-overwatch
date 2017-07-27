@@ -1,0 +1,17 @@
+{
+  "name": "angular-overwatch",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A first pass at AngularJS 1.6.5",
+  "repository": "https://github.com/CodeRequiem/angular-overwatch.git",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.9.0",
+	"angular": "1.6.5",
+	"bootstrap": "3.3.x"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server ./ -a localhost -p 3000 -c-1"
+  }
+}
