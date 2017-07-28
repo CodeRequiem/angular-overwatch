@@ -5,9 +5,9 @@ h1, h2, h3 {
     font-family: comic sans;
 }
 
-h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+h2, h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 body {
