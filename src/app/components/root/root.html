@@ -1,7 +1,20 @@
-<h1>Choose your character:</h1><br>
+<div class="top-menu">
+    <div class="overwatch-logo top-menu-item">
+        <img src="src/img/overwatch-logo.png" width="114" height="50" />
+    </div>
+    <div class="profile-menu top-menu-item">
+        <img src="src/img/profile-image.png" width="50" height="50" />
+
+    </div>
+    <div class="profile-name menu-item">
+        <h2>Aria Requiem</h2>
+    </div>
+</div>
+<h2>Choose your character:</h2>
     <div class="character-tile-container">
         <div class="character-tile" ng-repeat="character in $ctrl.characters">
-            <img src="src/img/{{character}}.jpg" title="Choose this character" />
+            <img src="src/img/{{character}}.jpg" />
+            <div><p class="character-name">{{character.toUpperCase()}}</p></div>
         </div>
     </div>
-<br><p>Characters to choose from: {{$ctrl.characters.length}}</p>
+<h3>Characters to choose from: {{$ctrl.characters.length}}</h3>
