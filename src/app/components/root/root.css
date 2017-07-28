@@ -5,4 +5,11 @@
 
 .character-tile {
     width: 150px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.character-tile:hover {
+    border-top: 5px solid lightblue;
+    border-bottom: 5px solid lightblue;
 }

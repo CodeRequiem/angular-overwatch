@@ -8,7 +8,7 @@
   "devDependencies": {
     "http-server": "^0.9.0",
 	"angular": "1.6.5",
-	"bootstrap": "3.3.x",
+	"bootstrap": "3.3.x"
   },
   "scripts": {
     "prestart": "npm install",

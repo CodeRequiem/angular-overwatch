@@ -1,8 +1,8 @@
 function CharacterSelectionController() {
     this.characters = [
         "ana",
-        "dva",
         "bastion",
+        "dva",
         "genji",
         "hanzo",
         "junkrat",
