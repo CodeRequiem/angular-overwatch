@@ -1,4 +1,4 @@
-function CharacterSelectionController() {
+export default function CharacterSelection() {
     this.characters = [
         "ana",
         "bastion",
@@ -26,6 +26,3 @@ function CharacterSelectionController() {
         "zenyatta"
     ];
 }
-angular
-    .module('app')
-    .controller('CharacterSelectionController', CharacterSelectionController);
