@@ -25,4 +25,8 @@ export default function CharacterSelection() {
         "zarya",
         "zenyatta"
     ];
+
+    this.reverseSort = function() {
+        this.characters = this.characters.reverse();
+    }
 }

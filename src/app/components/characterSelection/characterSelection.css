@@ -69,3 +69,12 @@ body {
     text-align: center;
     font-family: monospace;
 }
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer button {
+    margin-left: 20px;
+}

@@ -1,0 +1,35 @@
+.title-screen {
+    display:flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+a.home {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
+
+a.character-selection {
+    position: absolute;
+    top: 32px;
+    left: 175px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+a.stats {
+    position: absolute;
+    top: 32px;
+    left: 285px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: monospace;
+}
