@@ -1,16 +1,17 @@
 import angular from 'angular';
-import uiRouter from '@uirouter/angularjs';
+import uiRouter from 'angular-ui-router';
 import template from './components/template/template.html';
 import CharacterSelect from './components/characterSelection/characterSelection.module.js';
 import Stats from './components/stats/stats.module.js';
 import Home from './components/home/home.module.js';
+import '../../index.html';
 
 routes.$inject = ['$stateProvider'];
 function routes($stateProvider) {
     $stateProvider.state('app', {
-        redirectTo: 'home',
         url: '',
         templateUrl: template,
+        redirectTo: 'home',
     });
 }
 
