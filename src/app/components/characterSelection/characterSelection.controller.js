@@ -1,3 +1,5 @@
+import contains from 'lodash/includes';
+
 export default function CharacterSelection() {
     this.characters = [
         "ana",
@@ -25,6 +27,10 @@ export default function CharacterSelection() {
         "zarya",
         "zenyatta"
     ];
+
+    this.filterByName = function(filterText) {
+        return this.characters.filter(characterName => contains(characterName, filterText));
+    }
 
     this.reverseSort = function() {
         this.characters = this.characters.reverse();
