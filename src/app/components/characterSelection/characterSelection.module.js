@@ -1,5 +1,6 @@
 import CharacterSelection from './characterSelection.component.js';
 import CharacterSelectionCtrl from './characterSelection.controller.js';
+import './characterSelection.less';
 
 routes.$inject = ['$stateProvider'];
 function routes($stateProvider) {

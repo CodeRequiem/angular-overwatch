@@ -5,6 +5,7 @@ import CharacterSelect from './components/characterSelection/characterSelection.
 import Stats from './components/stats/stats.module.js';
 import Home from './components/home/home.module.js';
 import '../../index.html';
+import './components/template/template.less';
 
 routes.$inject = ['$stateProvider'];
 function routes($stateProvider) {

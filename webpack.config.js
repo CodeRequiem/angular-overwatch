@@ -1,5 +1,8 @@
 var path = require('path');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+let extractLESS = new ExtractTextPlugin('bundle.css');
 
 module.exports = {
     entry: './src/app/app.module.js',
@@ -17,16 +20,22 @@ module.exports = {
     ],
     module: {
         loaders: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-        },
-        // { test: /\.html$/, loader: "html-loader" },
-        { test: /\.(html|jpg|png)$/, loader: "file-loader?name=[name].[ext]" },
-        { test: /\.css$/, loader: "style-loader!css-loader" }
-      ]
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+            },
+            { test: /\.(html|jpg|png)$/, loader: 'file-loader?name=[name].[ext]' },
+            // { test: /\.css$/, loader: "style-loader!css-loader" },
+            { test: /\.less$/i, use: extractLESS.extract({
+                fallback: 'style-loader',
+                use: ['css-loader', 'less-loader']
+            })},
+        ],
     },
+    plugins: [
+        extractLESS,
+    ],
     devServer: {
         contentBase: path.join(__dirname, "dist"),
         compress: true,

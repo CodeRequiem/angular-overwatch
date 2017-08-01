@@ -1,4 +1,5 @@
 import Home from './home.component.js';
+import './home.less';
 
 routes.$inject = ['$stateProvider'];
 function routes($stateProvider) {

@@ -1,5 +1,6 @@
 import Stats from './stats.component.js';
 import StatsCtrl from './stats.controller.js';
+import './stats.less';
 
 routes.$inject = ['$stateProvider'];
 function routes($stateProvider) {
