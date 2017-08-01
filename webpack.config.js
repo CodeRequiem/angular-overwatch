@@ -26,7 +26,6 @@ module.exports = {
                 loader: 'babel-loader',
             },
             { test: /\.(html|jpg|png)$/, loader: 'file-loader?name=[name].[ext]' },
-            // { test: /\.css$/, loader: "style-loader!css-loader" },
             { test: /\.less$/i, use: extractLESS.extract({
                 fallback: 'style-loader',
                 use: ['css-loader', 'less-loader']

@@ -1,8 +1,7 @@
 import templateUrl from './characterSelection.html';
+import CharacterSelectionCtrl from './characterSelection.controller.js';
 
-const CharacterSelection = {
+export const CharacterSelection = {
     templateUrl: templateUrl,
-    controller: 'CharacterSelection',
+    controller: CharacterSelectionCtrl,
 };
-
-export default CharacterSelection;
