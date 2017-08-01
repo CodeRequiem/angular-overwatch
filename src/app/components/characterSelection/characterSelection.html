@@ -1,7 +1,7 @@
 <h2>Choose your character:</h2>
     <!-- <character-tile ng-repeat="character in $ctrl.characters" ng-bind={{character}}></character-tile> -->
     <div class="character-tile-container">
-        <div class="character-tile" ng-repeat="character in $ctrl.characters">
+        <div class="character-tile" ng-repeat="character in $ctrl.characters | characterFilter:characterFilterText">
             <img src="img/{{character}}.jpg" />
             <div><p class="character-name">{{character.toUpperCase()}}</p></div>
         </div>
@@ -9,4 +9,5 @@
 <div class="footer">
     <h3>Characters to choose from: {{$ctrl.characters.length}}</h3>
     <button type="button" name="button" ng-click="$ctrl.reverseSort()">Sort</button>
+    <input type="input" name="filter" ng-model="characterFilterText"></input>
 </div>
