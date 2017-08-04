@@ -8,7 +8,6 @@ import Home from './components/home/home.module.js';
 import '../../index.html';
 import './app.less';
 
-
 routes.$inject = ['$stateProvider'];
 function routes($stateProvider) {
     $stateProvider.state('app', {
