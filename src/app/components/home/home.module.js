@@ -1,14 +1,6 @@
-import Home from './home.component.js';
+import {Home} from './home.js';
 import './home.less';
-
-routes.$inject = ['$stateProvider'];
-function routes($stateProvider) {
-    $stateProvider.state('home', {
-        parent: 'app',
-        url: '/home',
-        component: 'home',
-    });
-}
+import routes from './home.routes.js';
 
 export default angular
     .module("home", [])

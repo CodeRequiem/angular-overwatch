@@ -1,40 +1,4 @@
-h1, h2, h3 {
-    font-style: italic;
-    text-align: center;
-    color: white;
-    font-family: comic sans;
-}
-
-h2, h3 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.top-menu {
-    height: 75px;
-    width: 100%;
-    padding-top: 20px;
-}
-
-.top-menu-item {
-    height: 55px;
-}
-
-.overwatch-logo {
-    float: left;
-    padding-left: 20px;
-}
-
-.profile-menu {
-    float: right;
-    padding-right: 20px;
-}
-
-.profile-name {
-    vertical-align: middle;
-    float: right;
-    padding-right: 25px;
-}
+@import '../../styles/variables.less';
 
 .character-tile-container {
     display:flex;
@@ -59,18 +23,41 @@ h2, h3 {
 }
 
 .character-name {
-    font-size: 20px;
-    color: white;
-    font-style: italic;
+    font-size: @character-name-text-size;
+    color: @ghost;
+    font-style: @character-name-text-style;
     text-align: center;
-    font-family: monospace;
+    font-family: @character-name-text-font-family;
 }
 
-.footer {
+.character-selection__footer {
     display: flex;
     justify-content: center;
+    input {
+        font-family: @character-name-text-font-family;
+        font-style: @character-name-text-style;
+    }
+    button, input {
+        font-size: @sub-heading-text-size;
+        margin-left: @element-separation-margin;
+    }
+    button {
+        font-weight: bold;
+        color: @ghost;
+        background: @greysea;
+        font-family: @sub-heading-text-font-family;
+    }
 }
 
-.footer button {
-    margin-left: 20px;
+.character-selection__title,
+.character-selection__character-total {
+    display: block;
+    font-style: italic;
+    text-align: center;
+    margin-top: @sub-heading-text-margin;
+    margin-bottom: @sub-heading-text-margin;
+    font-size: @sub-heading-text-size;
+    font-family: @sub-heading-text-font-family;
+    font-weight: bold;
+    color: @ghost;
 }

@@ -1,0 +1,25 @@
+<div class="page-wrapper">
+    <div class="top-menu">
+        <div>
+            <a class="home" ui-sref="home" ui-sref-active="active">
+                <div class="overwatch-logo">
+                    <img src="img/overwatch-logo.png" width="114" height="50" />
+                </div>
+            </a>
+
+            <ul class="nav">
+                <li class="nav-item"><a ui-sref="characterSelection">PLAY</a></li>
+                <li class="nav-item"><a ui-sref="stats">STATS</a></li>
+            </ul>
+        </div>
+
+        <div class="profile">
+            <span class="profile__name">Aria Requiem</span>
+            <img src="img/profile-image.png" width="50" height="50" />
+        </div>
+
+    </div>
+    <div class="page-content">
+        <ui-view></ui-view>
+    </div>
+</div>

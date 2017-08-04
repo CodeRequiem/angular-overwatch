@@ -1,11 +1,13 @@
 import angular from 'angular';
 import uiRouter from '@uirouter/angularjs';
-import template from './components/template/template.html';
+import template from './app.html';
 import CharacterSelect from './components/characterSelection/characterSelection.module.js';
+import characterService from './factories/character.service.js';
 import Stats from './components/stats/stats.module.js';
 import Home from './components/home/home.module.js';
 import '../../index.html';
-import './components/template/template.less';
+import './app.less';
+
 
 routes.$inject = ['$stateProvider'];
 function routes($stateProvider) {
@@ -21,4 +23,8 @@ function loadDefaultPage($state) {
     $state.go('app');
 }
 
-angular.module('app', [uiRouter, CharacterSelect, Stats, Home]).config(routes).run(loadDefaultPage);
+angular
+    .module('app', [uiRouter, CharacterSelect, Stats, Home])
+    .factory('characterService', characterService)
+    .config(routes)
+    .run(loadDefaultPage);

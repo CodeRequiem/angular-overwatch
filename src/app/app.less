@@ -1,0 +1,62 @@
+@import './styles/variables.less';
+
+.nav {
+    display:inline-block;
+    list-style-type: none;
+    margin:0;
+}
+
+.nav-item {
+    margin:0;
+    display:inline-block;
+    margin-left: @element-separation-margin;
+    text-decoration: none;
+    color: @app-header-text-color;
+    font-size: @nav-menu-text-size;
+    font-weight: bold;
+    font-family: @app-header-text-font-family;
+}
+
+body {
+    background: @app-bg-color;
+    height:100vh;
+    margin:0;
+}
+
+a {
+    text-decoration: none;
+
+    &:focus, &:visited {
+        color:inherit;
+    }
+}
+
+.page-wrapper {
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.top-menu {
+    display:flex;
+    height: @app-header-height;
+    padding:@app-header-padding;
+    justify-content: space-between;
+
+    > div {
+        display:flex;
+        align-items: center;
+    }
+
+    .profile__name {
+        color: @player-name-text-color;
+        margin-right: @element-separation-margin;
+        font-size: @player-name-text-size;
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+
+.page-content {
+    flex:1;
+}

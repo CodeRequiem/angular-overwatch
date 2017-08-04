@@ -17,6 +17,7 @@ module.exports = {
                 to: 'img/',
             },
         ]),
+        extractLESS,
     ],
     module: {
         loaders: [
@@ -38,7 +39,6 @@ module.exports = {
             },
         ],
     },
-    plugins: [extractLESS],
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,

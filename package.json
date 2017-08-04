@@ -21,7 +21,6 @@
         "webpack": "^3.4.1"
     },
     "scripts": {
-        "prestart": "npm install",
         "start": "webpack-dev-server --open"
     },
     "dependencies": {

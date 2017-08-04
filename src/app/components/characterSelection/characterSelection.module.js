@@ -1,4 +1,4 @@
-import {CharacterSelection} from './characterSelection.component.js';
+import {CharacterSelection} from './characterSelection.js';
 import routes from './characterSelection.routes.js';
 import {characterFilter} from './characterSelection.filter.js';
 import './characterSelection.less';
