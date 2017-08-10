@@ -1,0 +1,33 @@
+@import '../../styles/variables.less';
+
+#loot-chart {
+    padding: 50px;
+    border: 2px solid @sunlight;
+}
+
+.loot__title {
+    font-family: @sub-heading-text-font-family;
+    font-size: @sub-heading-text-size;
+    color: @sub-heading-text-color;
+}
+
+.svg-chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loot-section {
+    position:relative;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.loot-chart__bar {
+    fill: @ghost;
+    stroke: @sunlight;
+    stroke-width: 3;
+}

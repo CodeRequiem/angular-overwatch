@@ -2,13 +2,17 @@ import templateUrl from './stats.html';
 
 class StatsCtrl {
     constructor(characterService) {
-        this.characters = characterService.getCharacters();
+        this.characterService = characterService;
+    }
+
+    $onInit() {
+        this.characters = this.characterService.getCharacters();
     }
 }
 
 StatsCtrl.$inject = ['characterService'];
 
-var stats = {
+const stats = {
     templateUrl: templateUrl,
     controller: StatsCtrl,
 };

@@ -18,7 +18,9 @@ class CharacterSelectionCtrl {
 
 CharacterSelectionCtrl.$inject = ['characterService'];
 
-export const CharacterSelection = {
+const characterSelection = {
     templateUrl: templateUrl,
     controller: CharacterSelectionCtrl,
 };
+
+module.exports = characterSelection;

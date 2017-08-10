@@ -13,4 +13,5 @@ function routes($stateProvider) {
 export default angular
     .module('stats', [])
     .component('stats', Stats)
-    .config(routes).name;
+    .config(routes)
+    .name;

@@ -12,7 +12,9 @@ class HomeCtrl {
 
 HomeCtrl.$inject = ['characterService'];
 
-export const Home = {
+const Home = {
     templateUrl: templateUrl,
     controller: HomeCtrl,
 };
+
+module.exports = Home;

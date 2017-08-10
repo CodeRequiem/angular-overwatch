@@ -1,7 +1,9 @@
-<div class="character-stats-container">
-    <div class="character-stat-row" ng-repeat="character in $ctrl.characters">
-        <span class="character-image"><img src="img/{{character.name}}.jpg" width="50px" height="40px"/></span>&nbsp;
-        <div><p class="character-name">{{character.name.toUpperCase()}}</p></div>&nbsp;&#8209;&nbsp;
-        <span class="stats-data">Clicks:{{character.clicked}}</span>
+<section class="stats-section">
+    <div class="character-stats-container">
+        <div class="character-stat-row" ng-repeat="character in $ctrl.characters">
+            <span class="character-image"><img src="img/{{character.name}}.jpg" width="50px" height="40px"/></span>&nbsp;
+            <div><p class="character-name">{{character.name.toUpperCase()}}</p></div>&nbsp;&#8209;&nbsp;
+            <span class="stats-data">Clicks:{{character.clicked}}</span>
+        </div>
     </div>
-</div>
+</section>
