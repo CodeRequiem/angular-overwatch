@@ -16,6 +16,8 @@ class LootCtrl {
         let width = 1675;
         let margin = 25;
 
+        let tooltip = d3.select('body').append('div').attr('class', 'tool-tip');
+
         let x = d3.scaleBand()
             .domain(this.characters.map(x => x.name.toUpperCase()))
             .range([0, width]);
@@ -41,11 +43,19 @@ class LootCtrl {
             .call(d3.axisLeft(y).ticks(4));
 
         let barGraph = chart.selectAll('rect').data(this.characters).enter().append('rect')
-            .attr('class', 'loot-chart__bar')
+            .attr('class', 'chart__bar')
             .attr('width', x.bandwidth())
             .attr('height', character => height - y(character.loot))
             .attr('x', character => x(character.name.toUpperCase()))
             .attr('y', character => y(character.loot))
+            .on('mouseover', data => {
+                tooltip
+                    .style('left', d3.event.pageX  + 'px')
+                    .style('top', d3.event.pageY - 100 + 'px')
+                    .style('display', 'inline-block')
+                    .html(data.name.toUpperCase() + "<br>Loot Obtained: " + data.loot);
+            })
+            .on('mouseout', data => tooltip.style('display', 'none'));
     }
 }
 

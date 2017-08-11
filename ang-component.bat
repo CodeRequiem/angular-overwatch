@@ -31,13 +31,20 @@ echo.>> %1.js
 echo class %1Ctrl {>> %1.js
 echo   constructor() {>> %1.js
 echo   }>> %1.js
+echo.>> %1.js
+echo   $onInit() {>> %1.js
+echo   }>> %1.js
 echo }>> %1.js
 echo.>> %1.js
-echo export const %1 = {>> %1.js
+echo //%1Ctrl.$inject = ['serviceNameHere'];
+echo.>> %1.js
+echo const %1 = {>> %1.js
 echo   templateUrl: templateUrl,>> %1.js
 echo   controller: %1Ctrl,>> %1.js
 echo   bindings: {}>> %1.js
 echo };>> %1.js
+echo.>> %1.js
+echo module.exports = %1;>> %1.js
 
 echo import angular from 'angular';>> %1.spec.js
 echo import 'angular-mocks';>> %1.spec.js
