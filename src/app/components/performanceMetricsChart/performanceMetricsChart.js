@@ -2,8 +2,9 @@ import templateUrl from './performanceMetricsChart.html';
 import * as d3 from 'd3';
 
 class PerformanceMetricsChartCtrl {
-    constructor(performanceData) {
+    constructor(performanceData, targetElement) {
         this.performanceData = performanceData;
+        this.targetElement = targetElement;
     }
 
     $onInit() {
@@ -27,7 +28,7 @@ class PerformanceMetricsChartCtrl {
             .domain([0, d3.max(totals, x => x.value)])
             .range([height, 0]);
 
-        let svgChartContainer = d3.select('#performance-metrics-chart').append('svg').attr('class', 'svg-chart-container')
+        let svgChartContainer = d3.select(this.targetElement || '#performance-metrics-chart').append('svg').attr('class', 'svg-chart-container')
             .attr('width', width + (2 *margin))
             .attr('height', height + (2 * margin))
 
