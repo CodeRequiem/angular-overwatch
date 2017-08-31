@@ -17,4 +17,8 @@ function getPerformanceMetrics() {
     ];
 }
 
+function getData() {
+    return [ { key: 'a', value: 1 }, { key: 'b', value: 2 }, { key: 'c', value: 3 }, { key: 'd', value: 4 }, { key: 'e', value: 5 } ];
+}
+
 export default performanceData;
