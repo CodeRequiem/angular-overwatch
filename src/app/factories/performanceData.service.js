@@ -1,6 +1,9 @@
+// this is all mock API data
 function performanceData() {
     return {
         getPerformanceMetrics: getPerformanceMetrics,
+        getData: getData,
+        getConfig: getConfig,
     }
 }
 
@@ -17,8 +20,25 @@ function getPerformanceMetrics() {
     ];
 }
 
-function getData() {
-    return [ { key: 'a', value: 1 }, { key: 'b', value: 2 }, { key: 'c', value: 3 }, { key: 'd', value: 4 }, { key: 'e', value: 5 } ];
+function getData(chartType) {
+    if (chartType === 'bar') {
+        return [{ x: 'a', y: 1 }, { x: 'b', y: 3 }, { x: 'c', y: 13 }, { x: 'd', y: 4 }, { x: 'e', y: 25 },
+            { x: 'f', y: 8 }, { x: 'g', y: 0 }, { x: 'h', y: 23 }, { x: 'i', y: 14 }, { x: 'j', y: 5 } ];
+    } else if (chartType === 'line') {
+        return [{ x: 1, y: 1 }, { x: 2, y: 5 }, { x: 3, y: 13 }, { x: 4, y: 24 }, { x: 5, y: 15 }, { x: 6, y: 12 },
+            { x: 7, y: 12 }, { x: 8, y: 8 }, { x: 9, y: 5 }, { x: 10, y: 2 }];
+    }
+    return [];
+}
+
+function getConfig() {
+    return {
+        xFormatFunction: function(x) { return x.toUpperCase(); },
+        chartType: 'bar',
+        toolTipEnabled: true,
+        toolTipClassName: 'performanceMetrics__tool-tip',
+        svgChartContainerClassName: 'svg-chart-template-container',
+    };;
 }
 
 export default performanceData;
