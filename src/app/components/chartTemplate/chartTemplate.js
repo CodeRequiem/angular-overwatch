@@ -1,13 +1,12 @@
 import templateUrl from './chartTemplate.html';
 import * as d3 from 'd3';
 
-// variables.less values
 const CHART_CONTAINER_IDENTIFIER = '#chart-template-container';
 const HEADER_HEIGHT = 75;
 
 class ChartTemplateCtrl {
-  constructor(performanceData) {
-      this.dataService = performanceData;
+  constructor(dataService) {
+      this.dataService = dataService;
   }
 
   $onInit() {
@@ -82,7 +81,7 @@ class ChartTemplateCtrl {
         .attr('height', config.height + (2 * config.margin));
 
       const noDataImage = svgContainer.append('g').attr('class', 'no-data-container').append('svg:image')
-        .attr("xlink:href", "img/no-data.jpg")
+        .attr("xlink:href", "https://d15shllkswkct0.cloudfront.net/wp-content/blogs.dir/1/files/2013/02/no-data.png")
         .attr("width", config.imageDimension)
         .attr("height", config.imageDimension)
         .attr("x", (config.width - (config.imageDimension/2)) / 2)
@@ -97,7 +96,7 @@ class ChartTemplateCtrl {
           imageDimension: 200,
           margin: 25,
           yTicks: 10,
-          xFormatFunction: function(x) { return x; },
+          xFormatFunction: (x) => x,
           chartType: 'bar',
           toolTipEnabled: false,
           toolTipClassName: 'performanceMetrics__tool-tip',
@@ -106,7 +105,7 @@ class ChartTemplateCtrl {
   }
 }
 
-ChartTemplateCtrl.$inject = ['performanceData'];
+ChartTemplateCtrl.$inject = ['dataService'];
 
 const chartTemplate = {
   templateUrl: templateUrl,

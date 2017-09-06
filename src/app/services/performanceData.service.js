@@ -33,7 +33,7 @@ function getData(chartType) {
 
 function getConfig() {
     return {
-        xFormatFunction: function(x) { return x.toUpperCase(); },
+        xFormatFunction: (x) => x.toUpperCase(),
         chartType: 'bar',
         toolTipEnabled: true,
         toolTipClassName: 'performanceMetrics__tool-tip',

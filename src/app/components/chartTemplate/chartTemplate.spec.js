@@ -1,6 +1,7 @@
 import angular from 'angular';
 import 'angular-mocks';
 import { chartTemplate } from './chartTemplate.js';
+import performanceDataService from '../../services/performanceData.service.js';
 
 describe('chartTemplate', () =
     beforeEach(() =
@@ -10,8 +11,29 @@ describe('chartTemplate', () =
         angular.mock.module('chartTemplateTest');
     });
 
-    test(
-        'test-name-here',
-        angular.mock.inject($componentController = }),
-    );
+    describe('Service', () => {
+      let service;
+
+      beforeEach(() => {
+        angular.mock.inject((performanceDataService) => {
+          service = performanceDataService;
+        });
+      });
+
+      // describe('testServiceCalls', () => {
+      //   test('should test service calls here', () => {
+      //
+      //   });
+      // });
+    });
+
+    describe('Chart', () => {
+      // describe('chartTests', () => {
+      //   test('should test chart logic', () => {
+      //
+      //   });
+      // });
+    });
+
+
 });

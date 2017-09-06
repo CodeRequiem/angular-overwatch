@@ -3,8 +3,8 @@ import uiRouter from '@uirouter/angularjs';
 import './app.less';
 import '../../index.html';
 import template from './app.html';
-import characterService from './factories/character.service.js';
-import performanceData from './factories/performanceData.service.js';
+import characterService from './services/character.service.js';
+import performanceDataService from './services/performanceData.service.js';
 import CharacterSelect from './components/characterSelection/characterSelection.module.js';
 import Stats from './components/stats/stats.module.js';
 import Loot from './components/loot/loot.module.js';
@@ -29,6 +29,6 @@ function loadDefaultPage($state) {
 angular
     .module('app', [uiRouter, CharacterSelect, Stats, Loot, PerformanceMetricsChart, Home, Chart])
     .factory('characterService', characterService)
-    .factory('performanceData', performanceData)
+    .factory('dataService', performanceDataService)
     .config(routes)
     .run(loadDefaultPage);

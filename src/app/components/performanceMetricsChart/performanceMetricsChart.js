@@ -72,7 +72,7 @@ class PerformanceMetricsChartCtrl {
     }
 }
 
-PerformanceMetricsChartCtrl.$inject = ['performanceData'];
+PerformanceMetricsChartCtrl.$inject = ['dataService'];
 
 const PerformanceMetricsChart = {
   templateUrl: templateUrl,
